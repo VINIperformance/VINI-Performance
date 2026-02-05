@@ -118,8 +118,8 @@ Vill du boka lektion, träningspass eller diskutera samarbete är du välkommen 
 </p>
 
 <p>
-Instagram: @dittkonto<br>
-E-post: dinmail@example.com
+Instagram: @viktor_nilsson.06<br>
+E-post: viktor.nilsson2006@hotmail.com
 </p>
 </div>
 

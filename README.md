@@ -1,5 +1,3 @@
-# VINI-Performance
-
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -46,8 +44,6 @@ header{
     border-radius:0 10px 10px 10px;
 }
 
-/* Dropdown */
-
 .dropdown{
     display:inline-block;
     position:relative;
@@ -79,6 +75,7 @@ header{
 }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -89,29 +86,27 @@ header{
 
 <div class="tabs">
 
-    <button class="tabbutton active" onclick="openTab(event,'om')">Om mig</button>
+<button class="tabbutton active" onclick="openTab(event,'om')">Om mig</button>
 
-    <div class="dropdown">
-        <button class="tabbutton">Lektioner ▾</button>
-        <div class="dropdown-content">
-            <a href="#" onclick="openTab(event,'lektioner_individ')">Individuella lektioner</a>
-            <a href="#" onclick="openTab(event,'lektioner_grupp')">Grupp & förening</a>
-            <a href="#" onclick="openTab(event,'lektioner_skola')">Skola</a>
-        </div>
-    </div>
-
-    <button class="tabbutton" onclick="openTab(event,'meriter')">Meriter</button>
-    <button class="tabbutton" onclick="openTab(event,'kontakt')">Kontakt</button>
-
+<div class="dropdown">
+<button class="tabbutton">Lektioner ▾</button>
+<div class="dropdown-content">
+<a href="#" onclick="openTab(event,'lektioner_individ')">Individuella lektioner</a>
+<a href="#" onclick="openTab(event,'lektioner_grupp')">Grupp & förening</a>
+<a href="#" onclick="openTab(event,'lektioner_skola')">Skola</a>
+</div>
 </div>
 
-<!-- Flikar -->
+<button class="tabbutton" onclick="openTab(event,'meriter')">Meriter</button>
+<button class="tabbutton" onclick="openTab(event,'kontakt')">Kontakt</button>
+
+</div>
 
 <div id="om" class="tabcontent">
 <h2>Om mig</h2>
 <p>
-Jag heter Viktor Nilsson och är långloppsåkare med målet att etablera mig på elitnivå och
-på sikt ta plats i ett Ski Classics-team. Jag tävlar för Lysekils Skid- & Löparförening.
+Jag heter Viktor Nilsson och är långloppsåkare med målet att etablera mig på elitnivå och på sikt ta plats i ett Ski Classics-team.
+Jag tävlar för Lysekils Skid- & Löparförening.
 </p>
 </div>
 

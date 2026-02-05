@@ -6,6 +6,37 @@
 <title>Viktor Nilsson – Långloppsåkare & tränare</title>
 
 <style>
+.dropdown{
+    display:inline-block;
+    position:relative;
+}
+
+.dropdown-content{
+    display:none;
+    position:absolute;
+    background:white;
+    min-width:200px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    border-radius:8px;
+    z-index:10;
+}
+
+.dropdown-content a{
+    display:block;
+    padding:10px;
+    text-decoration:none;
+    color:black;
+}
+
+.dropdown-content a:hover{
+    background:#eee;
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+<style>
 body{
     font-family: Arial, sans-serif;
     max-width: 900px;
@@ -57,11 +88,23 @@ header{
 </header>
 
 <div class="tabs">
+
     <button class="tabbutton active" onclick="openTab(event,'om')">Om mig</button>
-    <button class="tabbutton" onclick="openTab(event,'lektioner')">Lektioner</button>
+
+    <div class="dropdown">
+        <button class="tabbutton dropbtn">Lektioner ▾</button>
+        <div class="dropdown-content">
+            <a href="#" onclick="openTab(event,'lektioner_individ')">Individuella lektioner</a>
+            <a href="#" onclick="openTab(event,'lektioner_grupp')">Grupp & förening</a>
+            <a href="#" onclick="openTab(event,'lektioner_skola')">Skola</a>
+        </div>
+    </div>
+
     <button class="tabbutton" onclick="openTab(event,'meriter')">Meriter</button>
     <button class="tabbutton" onclick="openTab(event,'kontakt')">Kontakt</button>
+
 </div>
+
 
 <div id="om" class="tabcontent">
 <h2>Om mig</h2>
@@ -79,6 +122,30 @@ prestation i de stora svenska långloppen.
 </div>
 
 <div id="lektioner" class="tabcontent">
+    <div id="lektioner_individ" class="tabcontent">
+<h2>Individuella lektioner</h2>
+<p>
+Jag erbjuder individuella tekniklektioner inom längdskidåkning, anpassade efter nivå och mål.
+Perfekt för dig som vill förbättra teknik, effektivitet och självförtroende i spåret.
+</p>
+</div>
+
+<div id="lektioner_grupp" class="tabcontent">
+<h2>Grupp & förening</h2>
+<p>
+Jag håller träningspass och teknikträningar för föreningar och träningsgrupper,
+med fokus på utveckling, kvalitet och träningsglädje.
+</p>
+</div>
+
+<div id="lektioner_skola" class="tabcontent">
+<h2>Skola</h2>
+<p>
+Jag erbjuder inspirationspass och praktiska lektioner för skolor
+med inriktning på längdskidåkning, rörelse och träningslära.
+</p>
+</div>
+
 <h2>Lektioner & träningspass</h2>
 
 <p>
@@ -124,6 +191,7 @@ E-post: viktor.nilsson2006@hotmail.com
 </div>
 
 <script>
+<script>
 function openTab(evt, tabId){
 
     let contents = document.getElementsByClassName("tabcontent");
@@ -137,11 +205,15 @@ function openTab(evt, tabId){
     }
 
     document.getElementById(tabId).style.display = "block";
-    evt.currentTarget.classList.add("active");
+
+    if(evt && evt.currentTarget.classList.contains("tabbutton")){
+        evt.currentTarget.classList.add("active");
+    }
 }
 
 document.getElementById("om").style.display = "block";
 </script>
+
 
 </body>
 </html>
